@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Exercice 1</title>
-  </head>
-  <body>
-      <img src="images/image1.jpg" id="image1"/>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 1</title>
+</head>
+
+<body>
+  <img src="images/image1.jpg" id="image1" />
+  <script>
+    //## Exercice 1
+    // Dans le fichier HTML fourni, au survol de l'image ajouter une bordure de 3px rouge et la retirer quand la souris ne la survol plus.
+    
+    let recup = document.querySelector('img')
+    console.log(recup);
+
+    // ajouter une bordure
+    recup.addEventListener('mouseover', (event)=>{
+
+      recup.style.border= "solid 3px red";
+      console.log(recup.style.border);
+    })
+    // enlever la bordure
+    recup.addEventListener('mouseout',(event)=>{
+      recup.style.border= "none"
+    })
+
+  </script>
+</body>
+
 </html>
